@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  name: any;
 
   constructor() {}
+  
+  updateName() {
+    this.name.setValue('Nancy');
+  }
+
+
 
 }
