@@ -73,3 +73,8 @@ export class SturegisterPage implements OnInit {
       language: this.language
     });
   }
+
+
+
+}
+

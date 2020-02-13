@@ -232,4 +232,38 @@
         'has-success': password.valid && (password.dirty || password.touched)
    }">
    <ion-item>
-    <ion-label posit
+    <ion-label position="floating">Re-type Password </ion-label>
+    <ion-input type="password"
+           class="form-control"
+           formControlName="password"
+           required>
+           </ion-input>
+    <div class="form-control-feedback"
+         *ngIf="password.errors && (password.dirty || password.touched)">
+      <p style="color:red" *ngIf="password.errors.required">Password is required</p>
+      <p  style="color:red" *ngIf="password.errors.minlength">Password must be 8 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
+    </div>
+  </ion-item>
+  </div>
+
+
+
+  <ion-button (click)="doSomething()"shape="round" color="success">Register </ion-button>
+  <ion-button shape="round" color="success">Sign In</ion-button>
+  <!--
+    <pre>{{ password.errors | json }}</pre>
+  -->
+
+ 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
